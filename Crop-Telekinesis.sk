@@ -1,1 +1,8 @@
+#	Crop Telekinesis
+# This script allows players to get crops from harvesting withought them dropping on the ground for other players to pickup.
 
+
+on break:
+	if block below event-block is farmland:
+		cancel drops of items
+		give drops of event-block to player
