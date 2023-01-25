@@ -5,32 +5,31 @@
 
 on break:
 	if event-block is wheat item:
-		if event-block is not ripe wheat plant:
-			cancel event
-			send "&eYou have to wait for the plant to grow." to player
-	if event-block is ripe wheat plant:
+		add drops of block to {_drops::*}
 		cancel drops of items
-		give 1 wheat to player
+		loop {_drops::*}:
+			add loop-value to player's inventory
+			remove all seeds from player's inventory
 		set event-block to wheat item
-		wait 3 seconds
+		wait 5 seconds
 		set event-block to ripe wheat plant
+	
+	
 	if event-block is potato plant:
-		if event-block is not ripe potato plant:
-			cancel event
-			send "&eYou have to wait for the plant to grow." to player
-	if event-block is ripe potato plant:
+		add drops of block to {_drops::*}
 		cancel drops of items
-		give 1 potato to player
+		loop {_drops::*}:
+			add loop-value to player's inventory
 		set event-block to potato plant
-		wait 3 seconds
+		wait 5 seconds
 		set event-block to ripe potato plant
+		
+		
 	if event-block is carrot plant:
-		if event-block is not ripe carrot plant:
-			cancel event
-			send "&eYou have to wait for the plant to grow." to player
-	if event-block is ripe carrot plant:
+		add drops of block to {_drops::*}
 		cancel drops of items
-		give 1 carrot to player
+		loop {_drops::*}:
+			add loop-value to player's inventory
 		set event-block to carrot plant
-		wait 3 seconds
-		set event-block to ripe potato plant
+		wait 5 seconds
+		set event-block to ripe carrot plant
