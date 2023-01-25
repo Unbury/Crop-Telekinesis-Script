@@ -10,6 +10,7 @@ on break:
 		loop {_drops::*}:
 			add loop-value to player's inventory
 			remove all seeds from player's inventory
+			delete {_drops::*}
 		set event-block to wheat item
 		wait 5 seconds
 		set event-block to ripe wheat plant
@@ -20,6 +21,7 @@ on break:
 		cancel drops of items
 		loop {_drops::*}:
 			add loop-value to player's inventory
+			delete {_drops::*}
 		set event-block to potato plant
 		wait 5 seconds
 		set event-block to ripe potato plant
@@ -30,6 +32,7 @@ on break:
 		cancel drops of items
 		loop {_drops::*}:
 			add loop-value to player's inventory
+			delete {_drops::*}
 		set event-block to carrot plant
 		wait 5 seconds
 		set event-block to ripe carrot plant
